@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+}
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    height: 40px;
+    width: 40px;
+}
+.header__cart {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__cart i {
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+    transition: 0.3s;
+}
+.header__navStrings {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.header__link {
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+}
+.header__link:hover {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+.header__rightElem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+}
+.header__burger {
+    display: none;
+    cursor: pointer;
+    margin-left: 17px;
+    height: 25px;
+}
+.header__burger div {
+    width: 20px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.open-menu .burgerTop {
+    -webkit-transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    background-color: #fff;
+}
+.open-menu .burgerMiddle {
+    opacity: 0;
+} 
+.open-menu .burgerBottom {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    background-color: #fff;
+}
+.active {
+    top: 0 !important;
+    transition: 0.4s;
+    color: #fff;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .header__burger {
+        display: inline-block;
+    }
+    .header__navigation {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background-color: #000;
+        transition: 0.4s;
+    }
+    .header__link {
+        font-size: 24px;
+        color: #fff;
+    }
+    .header__navStrings {
+        margin-top: 70px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        margin: 15px 0px;
+    }
+    .header__cart i {
+        font-size: 20px;
+    }
+    .cart-inner {
+        color: #fff !important;
+        transition: 0.4s;
+    }
+    .header__burger div {
+        width: 22px;
+    }
+}
